@@ -5,6 +5,9 @@ python:
 services:
   - docker
 
+notifications:
+  slack: edserlabs:KKbi0flnhS1wMA6MzONdm2G0
+
 before_script: pip install docker-compose
 
 script:

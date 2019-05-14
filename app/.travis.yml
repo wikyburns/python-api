@@ -5,12 +5,16 @@ python:
 services:
   - docker
 
-before_script: pip install docker-compose
-
-before_install:
+before_script: 
   - echo "BEFORE INSTALL START"
   - gem install bundler
   - echo "BEFORE INSTALL END"
-  
+  - pip install docker-compose
+
+# before_install:
+#   - echo "BEFORE INSTALL START"
+#   - gem install bundler
+#   - echo "BEFORE INSTALL END"
+
 scripts:
   - docker-compose run --rm app sh -c "python manage.py test && flake8"
